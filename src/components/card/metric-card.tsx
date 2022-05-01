@@ -1,4 +1,4 @@
-import { Divider } from '@mui/material';
+import { Divider, Skeleton } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -6,10 +6,11 @@ import * as React from 'react';
 
 type Props = {
   readonly title: string;
+  readonly isLoading: boolean;
   readonly children: React.ReactElement;
 };
 
-const MetricCard: React.FC<Props> = ({ title, children }) => (
+const MetricCard: React.FC<Props> = ({ title, children, isLoading }) => (
   <Card
     sx={{
       padding: '1rem',
@@ -17,11 +18,17 @@ const MetricCard: React.FC<Props> = ({ title, children }) => (
       alignItems: 'center',
     }}
   >
-    <Typography style={{ padding: 10 }} textAlign="center" variant="h5">
+    <Typography style={{ padding: 5 }} textAlign="center" variant="h5">
       {title}
     </Typography>
     <Divider />
-    <CardContent>{children}</CardContent>
+    <CardContent>
+      {isLoading ? (
+        <Skeleton height={280} color="#ffff" variant="rectangular" />
+      ) : (
+        children
+      )}
+    </CardContent>
   </Card>
 );
 

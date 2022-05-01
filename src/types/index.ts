@@ -20,6 +20,13 @@ export interface BaseAPIParams<T = any> {
 }
 
 export type PerformanceResourceTimingHandler = Pick<
-PerformanceResourceTiming,
-'name' | 'responseEnd' | 'initiatorType' | 'startTime' | 'duration'
+  PerformanceResourceTiming,
+  'name' | 'responseEnd' | 'initiatorType' | 'startTime' | 'duration'
 >;
+
+export enum MetricType {
+  TTFB = 'ttfb',
+  FCP = 'fcp',
+  DOM_LOAD = 'domLoad',
+  WINDOW_LOAD = 'windowLoad',
+}

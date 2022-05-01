@@ -84,7 +84,7 @@ const getDomLoad = () => window._perfAnalytics.domLoad = convertToSec(performanc
 
 const getWindowLoad = () => window._perfAnalytics.windowLoad = convertToSec(new Date().getTime() - performance.timing.navigationStart); // measure ttfp =>  https://developer.mozilla.org/en-US/docs/Glossary/time_to_first_byte
 
-const getTTFP = () => window._perfAnalytics.ttfp = convertToSec(window.performance.timing.responseStart - window.performance.timing.navigationStart);
+const getTTFB = () => window._perfAnalytics.ttfb = convertToSec(window.performance.timing.responseStart - window.performance.timing.navigationStart);
 const getResourceLoadTimes = () => {
   const resources = performance.getEntriesByType("resource");
 
@@ -98,15 +98,17 @@ const getResourceLoadTimes = () => {
   }
 };
 const setUserAgent = () => window._perfAnalytics.userAgent = navigator.userAgent;
+const setLocationHref = () => window._perfAnalytics.userAgent = window.location.href;
 
 // @see window.d.ts
 
 window._perfAnalytics = {
   domLoad: 0,
   fcp: 0,
-  ttfp: 0,
+  ttfb: 0,
   windowLoad: 0,
   userAgent: null,
+  url: null,
   resources: []
 }; // check whether performance apis are supported
 // terminate the module in case of not supported
@@ -120,9 +122,10 @@ const isPerformanceAPISupported = () => {
 function initializeObservers() {
   getDomLoad();
   getWindowLoad();
-  getTTFP();
+  getTTFB();
   getResourceLoadTimes();
   setUserAgent();
+  setLocationHref();
 }
 
 (function init() {

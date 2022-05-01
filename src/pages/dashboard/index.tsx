@@ -1,8 +1,12 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
 import { fetchLatestMetrics } from '../../api/metric';
+import MenuAppBar from '../../components/app-bar';
 import { MetricCard } from '../../components/card';
 import { LineChart } from '../../components/chart';
+import { PRIMARY_DARK, PRIMARY_LIGHT } from '../../theme/colors';
+import { useThemeContext } from '../../theme/context';
+import { Metric, MetricType } from '../../types';
 
 const GRID_SPACING = 4;
 
@@ -11,56 +15,56 @@ type Props = {};
 const Dashboard: React.FC<Props> = () => {
   const [isLoading, setLoading] = React.useState<boolean>(false);
   const [hasError, setHasError] = React.useState<boolean>(false);
+  const [metricData, setMetricData] = React.useState<Metric[]>([]);
+
+  const { isDarkMode } = useThemeContext();
 
   React.useEffect(() => {
     fetchLatestMetrics({
       onLoadingCb: setLoading,
       onError: () => setHasError(true),
-      onSuccess: () => {},
+      onSuccess: (data) => setMetricData(data),
     });
   }, []);
 
+  React.useEffect(() => {
+    if (hasError) {
+      window.alert('An error occurred while fetching data');
+    }
+  }, [hasError]);
+
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-      }}
-    >
-      <Grid
+    <>
+      <MenuAppBar />
+
+      <Box
         sx={{
-          backgroundColor: '#3e52b9',
-          height: '100vh',
+          flexGrow: 1,
         }}
-        container
-        direction="row"
-        spacing={2}
       >
-        <Grid item spacing={GRID_SPACING} container direction="row">
-          <Grid item md={6} sm={12}>
-            <MetricCard title="TTFB">
-              <LineChart />
-            </MetricCard>
-          </Grid>
-          <Grid item md={6} sm={12}>
-            <MetricCard title="FCP">
-              <LineChart />
-            </MetricCard>
-          </Grid>
+        <Grid
+          sx={{
+            backgroundColor: isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT,
+            height: '100vh',
+          }}
+          spacing={GRID_SPACING}
+          container
+          direction="row"
+        >
+          {Object.values(MetricType).map((metricType) => (
+            <Grid key={metricType} item md={6} sm={12}>
+              <MetricCard isLoading={isLoading} title={metricType}>
+                <LineChart
+                  xAxisKey="createdAt"
+                  yAxisKey={metricType}
+                  data={metricData}
+                />
+              </MetricCard>
+            </Grid>
+          ))}
         </Grid>
-        <Grid item spacing={GRID_SPACING} container direction="row">
-          <Grid item md={6} sm={12}>
-            <MetricCard title="Dom Load">
-              <LineChart />
-            </MetricCard>
-          </Grid>
-          <Grid item md={6} sm={12}>
-            <MetricCard title="Window Load">
-              <LineChart />
-            </MetricCard>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </>
   );
 };
 
