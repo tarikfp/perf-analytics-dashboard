@@ -26,7 +26,7 @@ function __awaiter(thisArg, _arguments, P, generator) {
     });
 }
 
-const BASE_URL = "http://localhost:3001/metric-model";
+const BASE_URL = "https://tarikfp-perf-analytics-api.herokuapp.com/metric-model";
 const sendMetricsWithFetch = data => __awaiter(void 0, void 0, void 0, function* () {
   return fetch(BASE_URL, {
     mode: "no-cors",
@@ -37,11 +37,6 @@ const sendMetricsWithFetch = data => __awaiter(void 0, void 0, void 0, function*
     }
   });
 }); // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
-
-const sendMetricsWithBeacon = _data => __awaiter(void 0, void 0, void 0, function* () {
-  // return if it ended successfully or not
-  return navigator.sendBeacon(BASE_URL, _data);
-});
 
 const convertToSec = ms => ms / 1000;
 
@@ -140,14 +135,18 @@ function initializeObservers() {
     const fcpEntry = yield getFcp();
     window._perfAnalytics.fcp = convertToSec((_a = fcpEntry === null || fcpEntry === void 0 ? void 0 : fcpEntry.startTime) !== null && _a !== void 0 ? _a : 0);
     initializeObservers(); // send metric data to api
-    // check whether sendBeacon is available
+    // facing CORB issue while using navigator.sendBeacon API
+    // will prefer to use fetchAPI instead
+    // @see https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
 
-    if (!navigator.sendBeacon) {
+    return sendMetricsWithFetch(JSON.stringify(window._perfAnalytics)); // check whether sendBeacon is available
+
+    /*   if (!navigator.sendBeacon) {
       // use fetch api
       sendMetricsWithFetch(JSON.stringify(window._perfAnalytics));
     } else {
       sendMetricsWithBeacon(JSON.stringify(window._perfAnalytics));
-    }
+    } */
   }));
 })();
 
