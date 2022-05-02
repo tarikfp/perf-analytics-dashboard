@@ -1,6 +1,6 @@
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { Switch } from '@mui/material';
+import { IconButton } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -27,12 +27,13 @@ export default function MenuAppBar() {
             Performance analytics dashboard
           </Typography>
 
-          <Switch value={isDarkMode} color="info" onClick={toggleDarkMode} />
-          {!isDarkMode ? (
-            <Brightness4Icon htmlColor={PRIMARY_DARK} />
-          ) : (
-            <LightModeIcon />
-          )}
+          <IconButton role="button" onClick={toggleDarkMode}>
+            {!isDarkMode ? (
+              <Brightness4Icon htmlColor={PRIMARY_DARK} />
+            ) : (
+              <LightModeIcon htmlColor={WHITE} />
+            )}
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>

@@ -50,7 +50,7 @@ export default function CollapsableContent<T extends DataTime>({
                 {data.map((row) => (
                   <TableRow key={row.createdAt ?? row.startTime}>
                     {Object.values(row).map((value) => (
-                      <TableCell>
+                      <TableCell key={value + Math.random() * 9999}>
                         {typeof value === 'number' ? value.toFixed(3) : value}
                       </TableCell>
                     ))}

@@ -46,7 +46,7 @@ export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
           stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
           allowDataOverflow
           type="number"
-          tickFormatter={(value) => `${value} ms`}
+          tickFormatter={(value) => `${value} sec`}
         />
 
         <Brush tickFormatter={formatAxisDate} dataKey={xAxisKey} height={30} />

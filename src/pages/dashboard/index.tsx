@@ -85,7 +85,7 @@ const Dashboard: React.FC<Props> = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid marginTop={4} xs={12}>
+      <Grid item marginTop={4} xs={12}>
         <DataTable data={metricData} />
       </Grid>
     </Box>

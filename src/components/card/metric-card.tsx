@@ -17,11 +17,11 @@ interface Props extends React.PropsWithChildren<any> {
 
 const MetricCard: React.FC<Props> = ({ title, children, isLoading }) => {
   const { isDarkMode } = useThemeContext();
+
   return (
     <Card
       sx={{
         backgroundColor: isDarkMode ? PRIMARY_LIGHT : WHITE,
-
         padding: '1rem',
         justifyContent: 'center',
         alignItems: 'center',

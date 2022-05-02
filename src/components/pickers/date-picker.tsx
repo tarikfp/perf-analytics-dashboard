@@ -4,7 +4,13 @@ import { DateTimePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as React from 'react';
-import { PRIMARY_LIGHT, useThemeContext, WHITE } from '../../theme';
+import {
+  PRIMARY,
+  PRIMARY_DARK,
+  PRIMARY_LIGHT,
+  useThemeContext,
+  WHITE,
+} from '../../theme';
 
 type Props = {
   readonly onSubmit: () => void;
@@ -74,7 +80,16 @@ export default function DatePickers({
             item
             md={4}
           >
-            <Button onClick={onSubmit} variant="contained">
+            <Button
+              sx={{
+                ':hover': {
+                  backgroundColor: !isDarkMode ? PRIMARY : PRIMARY_DARK,
+                },
+                backgroundColor: isDarkMode ? PRIMARY : PRIMARY_DARK,
+              }}
+              onClick={onSubmit}
+              variant="contained"
+            >
               Submit
             </Button>
           </Grid>

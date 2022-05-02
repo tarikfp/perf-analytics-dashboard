@@ -10,6 +10,7 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'react/jsx-props-no-spreading': 0,
     'no-alert': 0,
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/jsx-curly-newline': 0,
     'react/require-default-props': 0,
   },

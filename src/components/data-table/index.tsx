@@ -89,7 +89,7 @@ export default function DataTable({ data }: Props) {
             {data
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => (
-                <>
+                <React.Fragment key={row._id}>
                   <TableRow
                     hover
                     role="checkbox"
@@ -99,7 +99,7 @@ export default function DataTable({ data }: Props) {
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
-                        <>
+                        <React.Fragment key={column.id}>
                           {column.id === 'url' && (
                             <TableCollapsableCell
                               isOpen={row._id === collapseTableRowId}
@@ -122,7 +122,7 @@ export default function DataTable({ data }: Props) {
                               ? column.format(value as number)
                               : (value as string | number)}
                           </MemoizedTableCell>
-                        </>
+                        </React.Fragment>
                       );
                     })}
                   </TableRow>
@@ -135,7 +135,7 @@ export default function DataTable({ data }: Props) {
                     title={`${row.url} resources`}
                     isOpen={collapseTableRowId === row._id}
                   />
-                </>
+                </React.Fragment>
               ))}
           </TableBody>
         </Table>
