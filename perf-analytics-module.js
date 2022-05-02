@@ -46,13 +46,15 @@ const parseResourceTiming = resourceTiming => {
     name,
     initiatorType,
     responseEnd,
-    startTime
+    startTime,
+    transferSize
   } = resourceTiming;
   return {
     duration,
     initiatorType,
     name,
     responseEnd,
+    transferSize,
     startTime
   };
 }; // metric utils
@@ -98,7 +100,7 @@ const getResourceLoadTimes = () => {
   }
 };
 const setUserAgent = () => window._perfAnalytics.userAgent = navigator.userAgent;
-const setLocationHref = () => window._perfAnalytics.userAgent = window.location.href;
+const setLocationHref = () => window._perfAnalytics.url = window.location.href;
 
 // @see window.d.ts
 

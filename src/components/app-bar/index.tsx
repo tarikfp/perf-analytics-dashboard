@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext } from '../../theme';
+import { BLACK, PRIMARY_DARK, useThemeContext, WHITE } from '../../theme';
 
 export default function MenuAppBar() {
   const { isDarkMode, toggleDarkMode } = useThemeContext();
@@ -14,16 +14,25 @@ export default function MenuAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        sx={{ backgroundColor: isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT }}
+        sx={{ backgroundColor: isDarkMode ? PRIMARY_DARK : WHITE }}
         position="fixed"
       >
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            color={isDarkMode ? WHITE : BLACK}
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
             Performance analytics dashboard
           </Typography>
 
-          <Switch value={isDarkMode} onClick={toggleDarkMode} />
-          {!isDarkMode ? <Brightness4Icon /> : <LightModeIcon />}
+          <Switch value={isDarkMode} color="info" onClick={toggleDarkMode} />
+          {!isDarkMode ? (
+            <Brightness4Icon htmlColor={PRIMARY_DARK} />
+          ) : (
+            <LightModeIcon />
+          )}
         </Toolbar>
       </AppBar>
     </Box>

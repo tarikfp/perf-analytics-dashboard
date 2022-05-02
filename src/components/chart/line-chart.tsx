@@ -25,34 +25,31 @@ export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
   const { isDarkMode } = useThemeContext();
 
   return (
-    <ResponsiveContainer width="99%" height={280}>
+    <ResponsiveContainer width="99%" height={350}>
       <LineChartBase
         data={data}
         margin={{
-          top: 5,
-          right: 30,
+          top: 25,
+          right: 20,
           left: 20,
           bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
+          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
           allowDataOverflow
           tickFormatter={formatAxisDate}
           dataKey={xAxisKey}
         />
         <YAxis
+          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
           allowDataOverflow
           type="number"
           tickFormatter={(value) => `${value} ms`}
         />
 
-        <Brush
-          tickFormatter={formatAxisDate}
-          dataKey={xAxisKey}
-          height={30}
-          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
-        />
+        <Brush tickFormatter={formatAxisDate} dataKey={xAxisKey} height={30} />
 
         <Tooltip labelFormatter={formatTooltipDate} />
         <Legend />

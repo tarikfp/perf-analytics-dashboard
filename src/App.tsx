@@ -1,4 +1,6 @@
 import * as React from 'react';
+import MenuAppBar from './components/app-bar';
+import MainLayout from './components/layout';
 import { Dashboard } from './pages';
 import { ThemeContext } from './theme/context';
 
@@ -15,7 +17,10 @@ function App() {
 
   return (
     <ThemeContext.Provider value={contextVal}>
-      <Dashboard />
+      <MainLayout>
+        <MenuAppBar />
+        <Dashboard />
+      </MainLayout>
     </ThemeContext.Provider>
   );
 }

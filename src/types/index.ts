@@ -1,10 +1,12 @@
 export type Metric = {
-  readonly ttfp: number;
+  readonly _id: string;
+  readonly ttfb: number;
   readonly fcp: number;
   readonly domLoad: number;
   readonly windowLoad: number;
   readonly resources: PerformanceResourceTimingHandler[];
   readonly userAgent: string | null;
+  readonly url: string | null;
   readonly createdAt: string;
 };
 
@@ -21,7 +23,12 @@ export interface BaseAPIParams<T = any> {
 
 export type PerformanceResourceTimingHandler = Pick<
   PerformanceResourceTiming,
-  'name' | 'responseEnd' | 'initiatorType' | 'startTime' | 'duration'
+  | 'name'
+  | 'responseEnd'
+  | 'initiatorType'
+  | 'startTime'
+  | 'duration'
+  | 'transferSize'
 >;
 
 export enum MetricType {

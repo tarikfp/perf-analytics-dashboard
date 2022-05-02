@@ -8,8 +8,10 @@ module.exports = {
     'no-console': 2,
     'import/prefer-default-export': 0,
     'implicit-arrow-linebreak': 0,
+    'react/jsx-props-no-spreading': 0,
     'no-alert': 0,
     'react/jsx-curly-newline': 0,
+    'react/require-default-props': 0,
   },
   ignorePatterns: [
     'node_modules/',
