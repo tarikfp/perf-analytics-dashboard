@@ -21,5 +21,7 @@ module.exports = {
     'babel.config.js',
     'commitlint.config.js',
     'jest.config.js',
+    'tarikfp-perf-analytics-module.js',
+    'perf-analytics-module.js',
   ],
 };
