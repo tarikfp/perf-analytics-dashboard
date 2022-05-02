@@ -1,6 +1,6 @@
+import { API_DATA } from '@mocks';
+import { createWithThemeContext } from '@utils';
 import * as React from 'react';
-import { API_DATA } from '../../../__mocks__/api-data';
-import { createWithThemeContext } from '../../utils/test-utils';
 import LineChart from './line-chart';
 
 test('metric card renders correctly', () => {

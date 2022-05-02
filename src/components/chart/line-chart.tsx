@@ -1,3 +1,6 @@
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext } from '@theme';
+import { Metric } from '@types';
+import { formatAxisDate, formatTooltipDate } from '@utils';
 import * as React from 'react';
 import {
   Brush,
@@ -10,10 +13,6 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { PRIMARY_DARK, PRIMARY_LIGHT } from '../../theme/colors';
-import { useThemeContext } from '../../theme/context';
-import { Metric } from '../../types';
-import { formatAxisDate, formatTooltipDate } from '../../utils';
 
 type Props = {
   readonly data: Metric[];

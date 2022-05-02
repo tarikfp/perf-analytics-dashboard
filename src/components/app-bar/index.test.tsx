@@ -1,10 +1,6 @@
-import { render } from '@testing-library/react';
+import { createWithThemeContext, renderWithThemeContext } from '@utils';
 import * as React from 'react';
 import MenuAppBar from '.';
-import {
-  createWithThemeContext,
-  wrapWithThemeContext,
-} from '../../utils/test-utils';
 
 test('app bar renders correctly', () => {
   const tree = createWithThemeContext(<MenuAppBar />);
@@ -12,11 +8,11 @@ test('app bar renders correctly', () => {
 });
 
 test('app bar header text renders correctly', () => {
-  const { getByText } = render(wrapWithThemeContext(<MenuAppBar />));
+  const { getByText } = renderWithThemeContext(<MenuAppBar />);
   expect(getByText('Performance analytics dashboard')).toBeTruthy();
 });
 
 test('app bar icon button renders correctly', () => {
-  const { getByRole } = render(wrapWithThemeContext(<MenuAppBar />));
+  const { getByRole } = renderWithThemeContext(<MenuAppBar />);
   expect(getByRole('button')).toBeTruthy();
 });

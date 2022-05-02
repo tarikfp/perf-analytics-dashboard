@@ -5,8 +5,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { BLACK, PRIMARY_DARK, useThemeContext, WHITE } from '@theme';
 import * as React from 'react';
-import { BLACK, PRIMARY_DARK, useThemeContext, WHITE } from '../../theme';
 
 export default function MenuAppBar() {
   const { isDarkMode, toggleDarkMode } = useThemeContext();

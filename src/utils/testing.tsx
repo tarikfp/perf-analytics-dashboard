@@ -1,10 +1,11 @@
+import { render, RenderResult } from '@testing-library/react';
+import { ThemeContext } from '@theme';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import { ThemeContext } from '../theme';
 
 const themeContextValue = {
   isDarkMode: false,
-  toggleDarkMode: () => {},
+  toggleDarkMode: () => null,
 };
 
 // helpers to create test component with theme context
@@ -19,6 +20,16 @@ export function createWithThemeContext(
       </ThemeContext.Provider>,
     )
     .toJSON();
+}
+
+export function renderWithThemeContext(
+  children: React.ReactElement | React.ReactNode,
+): RenderResult {
+  return render(
+    <ThemeContext.Provider value={themeContextValue}>
+      {children}
+    </ThemeContext.Provider>,
+  );
 }
 
 export function wrapWithThemeContext(

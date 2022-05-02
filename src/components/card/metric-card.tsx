@@ -2,20 +2,15 @@ import { Divider, Skeleton } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@theme';
 import * as React from 'react';
-import {
-  PRIMARY_DARK,
-  PRIMARY_LIGHT,
-  useThemeContext,
-  WHITE,
-} from '../../theme';
 
 interface Props extends React.PropsWithChildren<any> {
   readonly title: string;
   readonly isLoading: boolean;
 }
 
-const MetricCard: React.FC<Props> = ({ title, children, isLoading }) => {
+export default function MetricCard({ title, children, isLoading }: Props) {
   const { isDarkMode } = useThemeContext();
 
   return (
@@ -45,8 +40,4 @@ const MetricCard: React.FC<Props> = ({ title, children, isLoading }) => {
       </CardContent>
     </Card>
   );
-};
-
-export default MetricCard;
-
-MetricCard.displayName = 'METRIC.CARD';
+}

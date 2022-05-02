@@ -1,21 +1,19 @@
+import { fetchLatestMetrics, fetchMetricsByDate } from '@api/metric';
+import { MetricCard } from '@components/card';
+import { LineChart } from '@components/chart';
+import DataTable from '@components/data-table';
+import { DatePickers } from '@components/pickers';
 import { Box, Grid } from '@mui/material';
+import { PRIMARY } from '@theme';
+import { Metric, MetricType } from '@types';
 import * as React from 'react';
-import { fetchLatestMetrics, fetchMetricsByDate } from '../../api/metric';
-import { MetricCard } from '../../components/card';
-import { LineChart } from '../../components/chart';
-import DataTable from '../../components/data-table';
-import { DatePickers } from '../../components/pickers';
-import { PRIMARY } from '../../theme';
-import { Metric, MetricType } from '../../types';
 
 const GRID_SPACING = 4;
-
-type Props = {};
 
 const MemoizedMetricCard = React.memo(MetricCard);
 const MemoizedLineChart = React.memo(LineChart);
 
-const Dashboard: React.FC<Props> = () => {
+export default function Dashboard() {
   const [startDate, setStartDate] = React.useState<Date | null>(new Date());
   const [endDate, setEndDate] = React.useState<Date | null>(new Date());
   const [isLoading, setLoading] = React.useState<boolean>(false);
@@ -90,8 +88,4 @@ const Dashboard: React.FC<Props> = () => {
       </Grid>
     </Box>
   );
-};
-
-export default Dashboard;
-
-Dashboard.displayName = 'DASHBOARD';
+}

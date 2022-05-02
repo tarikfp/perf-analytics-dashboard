@@ -3,14 +3,14 @@ import TextField from '@mui/material/TextField';
 import { DateTimePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import * as React from 'react';
 import {
   PRIMARY,
   PRIMARY_DARK,
   PRIMARY_LIGHT,
   useThemeContext,
   WHITE,
-} from '../../theme';
+} from '@theme';
+import * as React from 'react';
 
 type Props = {
   readonly onSubmit: () => void;

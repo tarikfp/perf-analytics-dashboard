@@ -7,18 +7,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import * as React from 'react';
-import {
-  PRIMARY_DARK,
-  PRIMARY_LIGHT,
-  useThemeContext,
-  WHITE,
-} from '../../theme';
-import { Metric, PerformanceResourceTimingHandler } from '../../types';
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@theme';
+import { Metric, PerformanceResourceTimingHandler } from '@types';
 import {
   findDisplayNameFromKey,
   parsePerformanceResourceTimingData,
-} from '../../utils';
+} from '@utils';
+import * as React from 'react';
 import CollapsableContent from './collapsable-content';
 import TableCollapsableCell from './table-collapsable-button';
 import { columns, resourceTableHeaderRows } from './table-columns';

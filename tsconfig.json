@@ -5,17 +5,30 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
+    "baseUrl": ".",
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
+    "paths": {
+      "*": ["./*"],
+      "@root/*": ["./*"],
+      "@src/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@theme": ["./src/theme/index"],
+      "@types": ["./src/types/index"],
+      "@utils": ["./src/utils/index"],
+      "@mocks": ["./__mocks__/index"]
+    },
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "perf-analytics-module.js"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

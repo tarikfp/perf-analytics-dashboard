@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
+import { PRIMARY } from '@theme';
 import * as React from 'react';
-import { PRIMARY } from '../../theme';
 
 export default function MainLayout({ children }: React.PropsWithChildren<any>) {
   return (

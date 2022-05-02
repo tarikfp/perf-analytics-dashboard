@@ -1,7 +1,7 @@
+import { API_DATA } from '@mocks';
+import { createWithThemeContext } from '@utils';
 import * as React from 'react';
 import DataTable from '.';
-import { API_DATA } from '../../../__mocks__/api-data';
-import { createWithThemeContext } from '../../utils/test-utils';
 
 const props = {
   data: API_DATA,

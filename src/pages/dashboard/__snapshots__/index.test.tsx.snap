@@ -1,0 +1,571 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard page renders correctly 1`] = `
+<div
+  className="MuiBox-root css-11sybyc"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-3su884-MuiPaper-root"
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderRadius": 4,
+        "height": 120,
+        "marginTop": 20,
+        "padding": 10,
+      }
+    }
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-125lwsu-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1evdibm-MuiGrid-root"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink={false}
+            htmlFor=":r0:"
+            id=":r0:-label"
+          >
+            Start date
+          </label>
+          <div
+            className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              aria-label="Choose date, selected date is May 3, 2022"
+              aria-readonly={true}
+              autoFocus={false}
+              className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r0:"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="05/03/2022 02:46 am"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="css-1ftyaf0"
+              >
+                <span>
+                  Start date
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-4 css-1ube6tp-MuiGrid-root"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink={false}
+            htmlFor=":r2:"
+            id=":r2:-label"
+          >
+            End date
+          </label>
+          <div
+            className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              aria-label="Choose date, selected date is May 3, 2022"
+              aria-readonly={true}
+              autoFocus={false}
+              className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r2:"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              readOnly={true}
+              required={false}
+              type="text"
+              value="05/03/2022 02:46 am"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="css-1ftyaf0"
+              >
+                <span>
+                  End date
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-md-4 css-jgkidt-MuiGrid-root"
+      >
+        <button
+          className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-1qicx88-MuiButtonBase-root-MuiButton-root"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          Submit
+          <span
+            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-jip7zu-MuiGrid-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-6 css-vexj24-MuiGrid-root"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-i54eqj-MuiPaper-root-MuiCard-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-1673d9l-MuiTypography-root"
+          style={
+            Object {
+              "padding": 5,
+            }
+          }
+        >
+          ttfb
+        </h5>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <span
+            className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+            color="#ffff"
+            style={
+              Object {
+                "height": 280,
+                "width": undefined,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-6 css-vexj24-MuiGrid-root"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-i54eqj-MuiPaper-root-MuiCard-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-1673d9l-MuiTypography-root"
+          style={
+            Object {
+              "padding": 5,
+            }
+          }
+        >
+          fcp
+        </h5>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <span
+            className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+            color="#ffff"
+            style={
+              Object {
+                "height": 280,
+                "width": undefined,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-6 css-vexj24-MuiGrid-root"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-i54eqj-MuiPaper-root-MuiCard-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-1673d9l-MuiTypography-root"
+          style={
+            Object {
+              "padding": 5,
+            }
+          }
+        >
+          domLoad
+        </h5>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <span
+            className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+            color="#ffff"
+            style={
+              Object {
+                "height": 280,
+                "width": undefined,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-6 css-vexj24-MuiGrid-root"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-i54eqj-MuiPaper-root-MuiCard-root"
+      >
+        <h5
+          className="MuiTypography-root MuiTypography-h5 css-1673d9l-MuiTypography-root"
+          style={
+            Object {
+              "padding": 5,
+            }
+          }
+        >
+          windowLoad
+        </h5>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <span
+            className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+            color="#ffff"
+            style={
+              Object {
+                "height": 280,
+                "width": undefined,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-pj2eij-MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-13p2epw-MuiPaper-root"
+    >
+      <div
+        className="MuiTableContainer-root css-102rwc2-MuiTableContainer-root"
+      >
+        <table
+          aria-label="sticky table"
+          className="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
+          role={null}
+        >
+          <thead
+            className="MuiTableHead-root css-1s6ny8r-MuiTableHead-root"
+            role={null}
+          >
+            <tr
+              className="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+              role={null}
+            >
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-y8ay40-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                  }
+                }
+              />
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-dwuj3p-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                URL
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-y8ay40-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                TTFB
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-y8ay40-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                FCP
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignRight MuiTableCell-sizeMedium css-i02g0k-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                Dom load
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignRight MuiTableCell-sizeMedium css-i02g0k-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                Window load
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-dwuj3p-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": undefined,
+                  }
+                }
+              >
+                User agent
+              </th>
+              <th
+                aria-sort={null}
+                className="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignRight MuiTableCell-sizeMedium css-i02g0k-MuiTableCell-root"
+                scope="col"
+                style={
+                  Object {
+                    "backgroundColor": "#ffffff",
+                    "color": "#29434e",
+                    "minWidth": 100,
+                  }
+                }
+              >
+                Created At
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+            role={null}
+          />
+        </table>
+      </div>
+      <div
+        className="MuiTablePagination-root css-jtlhu6-MuiTablePagination-root"
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar css-11bfvty-MuiToolbar-root-MuiTablePagination-toolbar"
+        >
+          <div
+            className="MuiTablePagination-spacer css-1psng7p-MuiTablePagination-spacer"
+          />
+          <p
+            className="MuiTablePagination-selectLabel css-pdct74-MuiTablePagination-selectLabel"
+            id=":r5:"
+          >
+            Rows per page:
+          </p>
+          <div
+            className="MuiInputBase-root MuiInputBase-colorPrimary css-16c50h-MuiInputBase-root-MuiTablePagination-select"
+            onClick={[Function]}
+            variant="standard"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby=":r5: :r4:"
+              className="MuiTablePagination-select MuiSelect-select MuiSelect-standard MuiInputBase-input css-194a1fa-MuiSelect-select-MuiInputBase-input"
+              id=":r4:"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              10
+            </div>
+            <input
+              aria-hidden={true}
+              className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              onAnimationStart={[Function]}
+              onChange={[Function]}
+              tabIndex={-1}
+              value={10}
+            />
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTablePagination-selectIcon MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            className="MuiTablePagination-displayedRows css-levciy-MuiTablePagination-displayedRows"
+          >
+            0–0 of 0
+          </p>
+          <div
+            className="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

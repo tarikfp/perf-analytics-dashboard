@@ -1,9 +1,5 @@
-import { render } from '@testing-library/react';
+import { createWithThemeContext, renderWithThemeContext } from '@utils';
 import * as React from 'react';
-import {
-  createWithThemeContext,
-  wrapWithThemeContext,
-} from '../../utils/test-utils';
 import MetricCard from './metric-card';
 
 const props = {
@@ -17,6 +13,6 @@ test('metric card renders correctly', () => {
 });
 
 test('metric card title text renders correctly', () => {
-  const { getByText } = render(wrapWithThemeContext(<MetricCard {...props} />));
+  const { getByText } = renderWithThemeContext(<MetricCard {...props} />);
   expect(getByText(props.title)).toBeTruthy();
 });
