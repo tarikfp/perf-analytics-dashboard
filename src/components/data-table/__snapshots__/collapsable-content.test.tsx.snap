@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`collapsable content renders correctly 1`] = `
+<tr
+  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+  role={null}
+>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    colSpan={6}
+    style={
+      Object {
+        "paddingBottom": 0,
+        "paddingTop": 0,
+      }
+    }
+  >
+    <div
+      className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+      style={
+        Object {
+          "minHeight": "0px",
+        }
+      }
+    >
+      <div
+        className="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+      >
+        <div
+          className="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+        >
+          <div
+            className="MuiBox-root css-1ynyhby"
+          >
+            <div
+              className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+            >
+              test
+            </div>
+            <table
+              aria-label="purchases"
+              className="MuiTable-root css-rqglhn-MuiTable-root"
+              role={null}
+            >
+              <thead
+                className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                role={null}
+              >
+                <tr
+                  className="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+                  role={null}
+                >
+                  <th
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1howxi1-MuiTableCell-root"
+                    scope="col"
+                  >
+                    test
+                  </th>
+                  <th
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1howxi1-MuiTableCell-root"
+                    scope="col"
+                  >
+                    test1
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                role={null}
+              >
+                <tr
+                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  role={null}
+                >
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    62704c195a3083ec7d7a3c08
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.011
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.376
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.293
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.406
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    http://localhost:3000/
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    2022-05-02T21:24:41.396Z
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.000
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+`;

@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import dayjs from 'dayjs';
+import * as dayjs from 'dayjs';
 import { PerformanceResourceTimingHandler } from '../types';
 
 // date formatters

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`metric card renders correctly 1`] = `
+<div
+  className="recharts-responsive-container"
+  style={
+    Object {
+      "height": 350,
+      "maxHeight": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "width": "99%",
+    }
+  }
+/>
+`;

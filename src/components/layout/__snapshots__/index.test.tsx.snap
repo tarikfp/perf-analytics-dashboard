@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout renders correctly 1`] = `
+<div
+  className="MuiBox-root css-xff8c1"
+/>
+`;
