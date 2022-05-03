@@ -34,7 +34,7 @@ export default function DashboardAction({
       style={{
         marginTop: 20,
         backgroundColor: isDarkMode ? PRIMARY_LIGHT : WHITE,
-        minHeight:  !xSmallToMid ? 150 : 300,
+        minHeight: !xSmallToMid ? 150 : 300,
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -88,7 +88,11 @@ export default function DashboardAction({
                 label: 'Fetch latest (last 30 mins)',
                 onClick: onFetchLatestClick,
               },
-              { label: 'Create metric data', onClick: () => null },
+              {
+                label: 'Create metric data',
+                onClick: () =>
+                  window.open('https://tfp-react-create-metrics.netlify.app/'),
+              },
             ]}
           />
         </LocalizationProvider>
