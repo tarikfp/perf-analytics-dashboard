@@ -1,6 +1,6 @@
-import { API_DATA } from '@mocks';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+import { API_DATA } from '../../../__mocks__';
 import CollapsableContent from './collapsable-content';
 
 const props = {

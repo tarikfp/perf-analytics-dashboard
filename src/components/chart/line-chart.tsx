@@ -1,6 +1,6 @@
-import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext } from '@theme';
-import { Metric } from '@types';
-import { formatAxisDate, formatTooltipDate } from '@utils';
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext } from '@/theme';
+import { Metric } from '@/types';
+import { formatAxisDate, formatTooltipDate } from '@/utils';
 import * as React from 'react';
 import {
   Brush,

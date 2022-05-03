@@ -1,5 +1,5 @@
+import { ThemeContext } from '@/theme';
 import { render, RenderResult } from '@testing-library/react';
-import { ThemeContext } from '@theme';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 

@@ -1,4 +1,10 @@
 /* eslint-disable no-underscore-dangle */
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@/theme';
+import { Metric, PerformanceResourceTimingHandler } from '@/types';
+import {
+  findDisplayNameFromKey,
+  parsePerformanceResourceTimingData,
+} from '@/utils';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -7,12 +13,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@theme';
-import { Metric, PerformanceResourceTimingHandler } from '@types';
-import {
-  findDisplayNameFromKey,
-  parsePerformanceResourceTimingData,
-} from '@utils';
 import * as React from 'react';
 import CollapsableContent from './collapsable-content';
 import TableCollapsableCell from './table-collapsable-button';

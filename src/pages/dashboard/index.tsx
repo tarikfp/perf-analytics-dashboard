@@ -1,11 +1,12 @@
-import { fetchLatestMetrics, fetchMetricsByDate } from '@api/metric';
-import { MetricCard } from '@components/card';
-import { LineChart } from '@components/chart';
-import DataTable from '@components/data-table';
-import { DatePickers } from '@components/pickers';
+/* eslint-disable import/extensions */
+import { fetchLatestMetrics, fetchMetricsByDate } from '@/api/metric';
+import { MetricCard } from '@/components/card';
+import { LineChart } from '@/components/chart';
+import DataTable from '@/components/data-table';
+import { DatePickers } from '@/components/pickers';
+import { PRIMARY } from '@/theme';
+import { Metric, MetricType } from '@/types';
 import { Box, Grid } from '@mui/material';
-import { PRIMARY } from '@theme';
-import { Metric, MetricType } from '@types';
 import * as React from 'react';
 
 const GRID_SPACING = 4;

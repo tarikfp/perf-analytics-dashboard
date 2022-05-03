@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import { PerformanceResourceTimingHandler } from '@types';
+import { PerformanceResourceTimingHandler } from '@/types';
 
 // helpers
 

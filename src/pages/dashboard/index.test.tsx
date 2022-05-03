@@ -1,4 +1,4 @@
-import { createWithThemeContext } from '@utils';
+import { createWithThemeContext } from '@/utils';
 import * as React from 'react';
 import Dashboard from '.';
 

@@ -1,5 +1,5 @@
-import { Metric } from '../../types';
-import { formatTableDate, takeFirstDigits } from '../../utils';
+import { Metric } from '@/types';
+import { formatTableDate, takeFirstDigits } from '@/utils';
 
 interface Column {
   id: keyof Metric;

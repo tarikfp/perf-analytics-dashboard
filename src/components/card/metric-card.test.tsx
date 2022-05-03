@@ -1,4 +1,4 @@
-import { createWithThemeContext, renderWithThemeContext } from '@utils';
+import { createWithThemeContext, renderWithThemeContext } from '@/utils';
 import * as React from 'react';
 import MetricCard from './metric-card';
 

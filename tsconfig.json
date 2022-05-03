@@ -12,16 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "paths": {
-      "*": ["./*"],
-      "@root/*": ["./*"],
-      "@src/*": ["./src/*"],
-      "@api/*": ["./src/api/*"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@theme": ["./src/theme/index"],
-      "@types": ["./src/types/index"],
-      "@utils": ["./src/utils/index"],
-      "@mocks": ["./__mocks__/index"]
+      "@/*": ["./src/*"]
     },
     "moduleResolution": "Node",
     "resolveJsonModule": true,

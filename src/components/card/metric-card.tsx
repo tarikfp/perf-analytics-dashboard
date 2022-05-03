@@ -1,8 +1,8 @@
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@/theme';
 import { Divider, Skeleton } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@theme';
 import * as React from 'react';
 
 interface Props extends React.PropsWithChildren<any> {

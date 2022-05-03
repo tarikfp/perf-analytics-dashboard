@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`metric card renders correctly 1`] = `
+exports[`line chart renders correctly 1`] = `
 <div
   className="recharts-responsive-container"
   style={
