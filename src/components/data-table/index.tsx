@@ -58,7 +58,7 @@ export default function DataTable({ data }: Props) {
         }}
       >
         <Table stickyHeader aria-label="sticky table">
-          <TableHead sx={{ backgroundColor: 'gold' }}>
+          <TableHead>
             <TableRow>
               <MemoizedTableCell
                 style={{

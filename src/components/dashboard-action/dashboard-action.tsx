@@ -1,40 +1,43 @@
-import {
-  PRIMARY,
-  PRIMARY_DARK,
-  PRIMARY_LIGHT,
-  useThemeContext,
-  WHITE,
-} from '@/theme';
-import { Button, Grid, Paper } from '@mui/material';
+import * as React from 'react';
+import { PRIMARY_LIGHT, useThemeContext, WHITE } from '@/theme';
+import { Grid, Paper, useMediaQuery, useTheme } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { DateTimePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import * as React from 'react';
+import ButtonGroup from '@/components/button-group';
 
 type Props = {
-  readonly onSubmit: () => void;
   readonly startDate: Date | null;
   readonly endDate: Date | null;
   readonly onStartDateChange: (date: Date | null) => void;
   readonly onEndDateChange: (date: Date | null) => void;
+  readonly onFetchLatestClick: () => void;
+  readonly onFetchBetweenDatesClick: () => void;
 };
 
-export default function DatePickers({
+export default function DashboardAction({
   endDate,
   startDate,
   onEndDateChange,
   onStartDateChange,
-  onSubmit,
+  onFetchBetweenDatesClick,
+  onFetchLatestClick,
 }: Props) {
+  const theme = useTheme();
+
+  const xSmallToMid = useMediaQuery(theme.breakpoints.between('xs', 'md'));
+
   const { isDarkMode } = useThemeContext();
   return (
     <Paper
       style={{
         marginTop: 20,
         backgroundColor: isDarkMode ? PRIMARY_LIGHT : WHITE,
-        height: 120,
+        minHeight:  !xSmallToMid ? 150 : 300,
         padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
         borderRadius: 4,
       }}
       elevation={3}
@@ -43,7 +46,10 @@ export default function DatePickers({
         direction="row"
         alignItems="center"
         justifyContent="center"
-        sx={{ height: 120 }}
+        sx={{
+          padding: xSmallToMid ? 4 : 0,
+          minHeight: !xSmallToMid ? 120 : 300,
+        }}
         container
         spacing={2}
       >
@@ -53,7 +59,9 @@ export default function DatePickers({
             alignItems="center"
             alignContent="center"
             item
-            md={4}
+            sm={6}
+            md={3}
+            xs={12}
           >
             <DateTimePicker
               label="Start date"
@@ -62,7 +70,7 @@ export default function DatePickers({
               renderInput={(params) => <TextField {...params} />}
             />
           </Grid>
-          <Grid item md={4}>
+          <Grid item md={3} sm={6} xs={12}>
             <DateTimePicker
               label="End date"
               value={endDate}
@@ -70,29 +78,19 @@ export default function DatePickers({
               renderInput={(params) => <TextField {...params} />}
             />
           </Grid>
-
-          <Grid
-            container
-            sx={{
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            item
-            md={4}
-          >
-            <Button
-              sx={{
-                ':hover': {
-                  backgroundColor: !isDarkMode ? PRIMARY : PRIMARY_DARK,
-                },
-                backgroundColor: isDarkMode ? PRIMARY : PRIMARY_DARK,
-              }}
-              onClick={onSubmit}
-              variant="contained"
-            >
-              Submit
-            </Button>
-          </Grid>
+          <ButtonGroup
+            buttonProps={[
+              {
+                label: 'Fetch between dates',
+                onClick: onFetchBetweenDatesClick,
+              },
+              {
+                label: 'Fetch latest (last 30 mins)',
+                onClick: onFetchLatestClick,
+              },
+              { label: 'Create metric data', onClick: () => null },
+            ]}
+          />
         </LocalizationProvider>
       </Grid>
     </Paper>

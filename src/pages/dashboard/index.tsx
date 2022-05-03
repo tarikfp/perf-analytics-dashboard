@@ -1,9 +1,8 @@
-/* eslint-disable import/extensions */
 import { fetchLatestMetrics, fetchMetricsByDate } from '@/api/metric';
 import { MetricCard } from '@/components/card';
 import { LineChart } from '@/components/chart';
 import DataTable from '@/components/data-table';
-import { DatePickers } from '@/components/pickers';
+import { DashboardAction } from '@/components/dashboard-action';
 import { PRIMARY } from '@/theme';
 import { Metric, MetricType } from '@/types';
 import { Box, Grid } from '@mui/material';
@@ -16,18 +15,12 @@ const MemoizedLineChart = React.memo(LineChart);
 
 export default function Dashboard() {
   const [startDate, setStartDate] = React.useState<Date | null>(new Date());
-  const [endDate, setEndDate] = React.useState<Date | null>(new Date());
+  const [endDate, setEndDate] = React.useState<Date | null>(
+    new Date(new Date().getTime() + 30 * 60000),
+  );
   const [isLoading, setLoading] = React.useState<boolean>(false);
   const [hasError, setHasError] = React.useState<boolean>(false);
   const [metricData, setMetricData] = React.useState<Metric[]>([]);
-
-  React.useEffect(() => {
-    fetchLatestMetrics({
-      onLoadingCb: setLoading,
-      onError: () => setHasError(true),
-      onSuccess: setMetricData,
-    });
-  }, []);
 
   React.useEffect(() => {
     if (hasError) {
@@ -49,6 +42,18 @@ export default function Dashboard() {
     }
   };
 
+  const handleFetchLatest = () => {
+    fetchLatestMetrics({
+      onLoadingCb: setLoading,
+      onError: () => setHasError(true),
+      onSuccess: setMetricData,
+    });
+  };
+
+  React.useEffect(() => {
+    handleFetchLatest();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -56,13 +61,15 @@ export default function Dashboard() {
         justifyContent: 'center',
       }}
     >
-      <DatePickers
-        onSubmit={handleFetchByDate}
+      <DashboardAction
+        onFetchBetweenDatesClick={handleFetchByDate}
+        onFetchLatestClick={handleFetchLatest}
         endDate={endDate}
         startDate={startDate}
         onEndDateChange={setEndDate}
         onStartDateChange={setStartDate}
       />
+
       <Grid
         sx={{
           backgroundColor: PRIMARY,

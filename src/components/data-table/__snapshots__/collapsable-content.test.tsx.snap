@@ -130,6 +130,183 @@ exports[`collapsable content renders correctly 1`] = `
                     0.000
                   </td>
                 </tr>
+                <tr
+                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  role={null}
+                >
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    62704c195a3083ec7d7a3c08
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.041
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.376
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.293
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.406
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    http://localhost:3000/
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    2022-05-02T21:24:41.396Z
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.000
+                  </td>
+                </tr>
+                <tr
+                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  role={null}
+                >
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    62704c195a3083ec7d7a3c08
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.031
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.376
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.293
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.406
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    http://localhost:3000/
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    2022-05-02T21:24:41.396Z
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.000
+                  </td>
+                </tr>
+                <tr
+                  className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  role={null}
+                >
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    62704c195a3083ec7d7a3c08
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.021
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.376
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.293
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.406
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    http://localhost:3000/
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    2022-05-02T21:24:41.396Z
+                  </td>
+                  <td
+                    aria-sort={null}
+                    className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                  >
+                    0.000
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

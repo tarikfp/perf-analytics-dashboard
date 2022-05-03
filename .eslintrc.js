@@ -3,6 +3,10 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.eslint.json',
   },
+  env: {
+    browser: true,
+    jest: true,
+  },
   rules: {
     'react/function-component-definition': 0,
     'no-console': 2,

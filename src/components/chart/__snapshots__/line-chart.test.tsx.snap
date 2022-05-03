@@ -5,11 +5,11 @@ exports[`line chart renders correctly 1`] = `
   className="recharts-responsive-container"
   style={
     Object {
-      "height": 350,
+      "height": 280,
       "maxHeight": undefined,
       "minHeight": undefined,
       "minWidth": undefined,
-      "width": "99%",
+      "width": "100%",
     }
   }
 />

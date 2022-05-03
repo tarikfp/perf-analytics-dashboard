@@ -1,1 +1,1 @@
-jest.useFakeTimers();
+import '@testing-library/jest-dom';

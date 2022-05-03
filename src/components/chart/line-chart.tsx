@@ -1,7 +1,8 @@
-import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext } from '@/theme';
+import * as React from 'react';
+import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@/theme';
 import { Metric } from '@/types';
 import { formatAxisDate, formatTooltipDate } from '@/utils';
-import * as React from 'react';
+import { Typography } from '@mui/material';
 import {
   Brush,
   CartesianGrid,
@@ -23,9 +24,11 @@ type Props = {
 export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
   const { isDarkMode } = useThemeContext();
 
-  return (
-    <ResponsiveContainer width="99%" height={350}>
+  return data.length ? (
+    <ResponsiveContainer width="100%" height={280}>
       <LineChartBase
+        width={500}
+        height={280}
         data={data}
         margin={{
           top: 25,
@@ -36,13 +39,13 @@ export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
-          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
+          stroke={isDarkMode ? WHITE : PRIMARY_LIGHT}
           allowDataOverflow
           tickFormatter={formatAxisDate}
           dataKey={xAxisKey}
         />
         <YAxis
-          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
+          stroke={isDarkMode ? WHITE : PRIMARY_LIGHT}
           allowDataOverflow
           type="number"
           tickFormatter={(value) => `${value} sec`}
@@ -50,15 +53,25 @@ export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
 
         <Brush tickFormatter={formatAxisDate} dataKey={xAxisKey} height={30} />
 
-        <Tooltip labelFormatter={formatTooltipDate} />
+        <Tooltip
+          contentStyle={{
+            backgroundColor: isDarkMode ? PRIMARY_DARK : WHITE,
+            color: isDarkMode ? WHITE : PRIMARY_DARK,
+          }}
+          labelFormatter={formatTooltipDate}
+        />
         <Legend />
         <Line
           type="monotone"
           dataKey={yAxisKey}
-          stroke={isDarkMode ? PRIMARY_DARK : PRIMARY_LIGHT}
+          stroke={isDarkMode ? WHITE : PRIMARY_LIGHT}
           activeDot={{ r: 8 }}
         />
       </LineChartBase>
     </ResponsiveContainer>
+  ) : (
+    <Typography variant="body2" textAlign="center">
+      No data
+    </Typography>
   );
 }

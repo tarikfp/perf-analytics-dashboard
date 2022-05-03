@@ -18,6 +18,7 @@ export default function MetricCard({ title, children, isLoading }: Props) {
       sx={{
         backgroundColor: isDarkMode ? PRIMARY_LIGHT : WHITE,
         padding: '1rem',
+
         justifyContent: 'center',
         alignItems: 'center',
       }}
@@ -32,11 +33,7 @@ export default function MetricCard({ title, children, isLoading }: Props) {
       </Typography>
       <Divider />
       <CardContent>
-        {isLoading ? (
-          <Skeleton height={280} color="#ffff" variant="rectangular" />
-        ) : (
-          children
-        )}
+        {isLoading ? <Skeleton height={280} variant="rectangular" /> : children}
       </CardContent>
     </Card>
   );
