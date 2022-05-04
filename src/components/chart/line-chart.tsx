@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PRIMARY_DARK, PRIMARY_LIGHT, useThemeContext, WHITE } from '@/theme';
 import { Metric } from '@/types';
-import { formatAxisDate, formatTooltipDate } from '@/utils';
+import { formatAxisDate, formatTableDate } from '@/utils';
 import { Typography } from '@mui/material';
 import {
   Brush,
@@ -58,7 +58,7 @@ export default function LineChart({ data, xAxisKey, yAxisKey }: Props) {
             backgroundColor: isDarkMode ? PRIMARY_DARK : WHITE,
             color: isDarkMode ? WHITE : PRIMARY_DARK,
           }}
-          labelFormatter={formatTooltipDate}
+          labelFormatter={formatTableDate}
         />
         <Legend />
         <Line

@@ -11,12 +11,10 @@ type MetricByDate = IMetricByDate & BaseAPIParams<Metric[]>;
 export const fetchMetricsByDate = async (
   params: MetricByDate,
 ): Promise<Metric[]> => {
-  const {
-    endDate, onError, onSuccess, startDate, onLoadingCb,
-  } = params;
+  const { endDate, onError, onSuccess, startDate, onLoadingCb } = params;
   try {
     onLoadingCb(true);
-    const response = await axiosInstance.get('/metric-model/date', {
+    const response = await axiosInstance.get<Metric[]>('/metric-model/date', {
       params: {
         endDate,
         startDate,
@@ -43,7 +41,7 @@ export const fetchAllMetrics = async (
   const { onError, onLoadingCb, onSuccess } = baseParams;
   try {
     onLoadingCb(true);
-    const response = await axiosInstance.get('/metric-model');
+    const response = await axiosInstance.get<Metric[]>('/metric-model');
     onSuccess(response.data);
     return response.data;
   } catch (err) {
@@ -65,7 +63,7 @@ export const fetchLatestMetrics = async (
   const { onError, onLoadingCb, onSuccess } = baseParams;
   try {
     onLoadingCb(true);
-    const response = await axiosInstance.get('/metric-model/latest');
+    const response = await axiosInstance.get<Metric[]>('/metric-model/latest');
     onSuccess(response.data);
     return response.data;
   } catch (err) {

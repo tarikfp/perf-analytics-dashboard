@@ -1,16 +1,14 @@
-import * as dayjs from 'dayjs';
+import * as dateFns from 'date-fns';
 
 // date formatters
 
-const formatTooltipDate = (date: string): string =>
-  dayjs(date).format('YYYY/MM/DD HH:mm:ss');
-
-const formatAxisDate = (date: string): string => dayjs(date).format('HH:mm:ss');
+const formatAxisDate = (date: string): string =>
+  dateFns.format(new Date(date), 'HH:mm:ss');
 
 const formatParamDate = (date: Date): string =>
-  dayjs(date).format('YYYY-MM-DD HH:mm');
+  dateFns.format(date, 'yyyy-MM-dd HH:mm');
 
-const formatTableDate = (date: Date | number): string =>
-  dayjs(date).format('YYYY-MM-DD HH:mm:ss');
+const formatTableDate = (date: string): string =>
+  dateFns.format(new Date(date), 'yyyy-MM-dd HH:mm:ss');
 
-export { formatAxisDate, formatParamDate, formatTableDate, formatTooltipDate };
+export { formatAxisDate, formatParamDate, formatTableDate };

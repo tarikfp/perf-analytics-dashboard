@@ -40,9 +40,9 @@ export default function ButtonGroup({ buttonProps }: Props) {
             sx={{
               height: matches ? 80 : 50,
               ':hover': {
-                backgroundColor: !isDarkMode ? PRIMARY : PRIMARY_DARK,
+                backgroundColor: isDarkMode ? PRIMARY : PRIMARY_DARK,
               },
-              backgroundColor: isDarkMode ? PRIMARY : PRIMARY_DARK,
+              backgroundColor: !isDarkMode ? PRIMARY : PRIMARY_DARK,
             }}
             variant="contained"
             key={label}
