@@ -11,6 +11,7 @@
     "dockerize-dev": "docker-compose -f docker-compose.dev.yml up",
     "dockerize-prod": "docker-compose -f docker-compose.prod.yml build",
     "test": "jest",
+    "deploy": "yarn lint && yarn test -u && yarn test && yarn build && ntl deploy --prod",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {

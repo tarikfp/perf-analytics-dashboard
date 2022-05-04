@@ -52,7 +52,7 @@ exports[`date pickers renders correctly 1`] = `
             readOnly={true}
             required={false}
             type="text"
-            value="05/04/2022 01:57 pm"
+            value="05/04/2022 05:31 pm"
           />
           <fieldset
             aria-hidden={true}
@@ -103,7 +103,7 @@ exports[`date pickers renders correctly 1`] = `
             readOnly={true}
             required={false}
             type="text"
-            value="05/04/2022 01:57 pm"
+            value="05/04/2022 05:31 pm"
           />
           <fieldset
             aria-hidden={true}
