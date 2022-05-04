@@ -59,7 +59,7 @@ const columns: readonly Column[] = [
     label: 'Created At',
     minWidth: 100,
     align: 'right',
-    format: formatTableDate,
+    format: (value: number) => formatTableDate(value.toString()),
   },
 ];
 

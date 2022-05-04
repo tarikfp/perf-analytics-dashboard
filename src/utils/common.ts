@@ -31,16 +31,8 @@ const parsePerformanceResourceTimingData = (
   }));
 };
 
-const sortByDate = <T>(data: T[], sortKey: keyof T) => {
-  return data.sort((a, b) => {
-    const dateA = new Date(Number(a[sortKey]));
-    const dateB = new Date(Number(b[sortKey]));
-    return dateB.getTime() - dateA.getTime();
-  });
-};
-
 export {
-  sortByDate,
+  convertToSec,
   takeFirstDigits,
   findDisplayNameFromKey,
   parsePerformanceResourceTimingData,
